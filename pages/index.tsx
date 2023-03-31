@@ -1,5 +1,13 @@
-function HomePage() {
-  return <div>Welcome to Next.js!</div>;
-}
+import NavBar from '../components/navbar';
+import Footer from '../components/footer';
 
-export default HomePage;
+export default function HomePage() {
+  <NavBar />;
+  return (
+    <div>
+      <NavBar />
+      Welcome to Next.js!
+      <Footer />
+    </div>
+  );
+}
