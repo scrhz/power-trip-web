@@ -1,3 +1,3 @@
 export default () => {
-  return <div>PTC 2023</div>;
+  return <footer>PTC 2023</footer>;
 };

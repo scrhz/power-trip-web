@@ -1,0 +1,54 @@
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+body {
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #1c1c1c;
+  color: #f2f2f2;
+  padding: 20px;
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+.content {
+  max-width: 1080px;
+  margin: 10px;
+}
+
+nav {
+  margin: 0px auto 60px;
+  padding: 10px 0;
+  display: flex-start;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+nav a {
+  margin-left: 12px;
+}
+
+nav h1 {
+  margin: 10px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex;
+  align-items: flex;
+}
+
+h2 {
+  margin: 0px;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 60px;
+  color: #d2d2d2;
+  border-top: 1px solid #d2d2d2;
+}
