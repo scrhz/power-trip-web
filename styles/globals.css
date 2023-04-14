@@ -19,8 +19,12 @@ a {
   margin: 10px;
 }
 
+.content h2 {
+  margin: 0px auto 40px;
+}
+
 nav {
-  margin: 0px auto 60px;
+  margin: 0px auto 40px;
   padding: 10px 0;
   display: flex-start;
   justify-content: flex-start;
@@ -38,10 +42,6 @@ nav h1 {
   display: flex;
   justify-content: flex;
   align-items: flex;
-}
-
-h2 {
-  margin: 0px;
 }
 
 footer {
