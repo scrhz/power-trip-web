@@ -38,12 +38,28 @@ CREATE OR REPLACE FUNCTION add_item(
     DECLARE category_id INTEGER;
     DECLARE brand_id INTEGER;
 BEGIN
-    INSERT INTO category(slug) VALUES (category_name)
-    RETURNING id into category_id;
-
-    INSERT INTO brand(slug) VALUES (brand_name)
-    RETURNING id into brand_id;
-
-    INSERT INTO item(model, brand, category) VALUES (model_name, brand_id, category_id);
+    INSERT INTO item(model, brand, category) 
+    VALUES (
+        model_name, 
+        (
+            SELECT b.id
+            FROM brand b
+            WHERE b.slug = brand_name
+        ), 
+        (
+            SELECT c.id
+            FROM category c
+            WHERE c.slug = category_name
+        )
+    );
 END; 
 $$ LANGUAGE plpgsql;
+
+SELECT add_item('PT Monitor 15', 'Custom', 'Full-Range Speaker');
+SELECT add_item('PT Cubo 15', 'Custom', 'Subwoofer');
+SELECT add_item('Blackline XP12', 'Martin Audio', 'Subwoofer');
+SELECT add_item('E4-75', 'MC2', 'Electronics');
+SELECT add_item('E15', 'MC2', 'Electronics');
+SELECT add_item('Delta 100 DSP', 'MC2', 'Electronics');
+SELECT add_item('SC5000', 'Denon', 'Backline');
+SELECT add_item('Xone 92', 'Allen & Heath', 'Backline');
