@@ -5,10 +5,11 @@ export default function ProductCard({ product }) {
 
     return (
         <li>
-            <Link href={`/products/${slug}`} aria-label={modelName} />
+            <Link href={`/products/${slug}`} aria-label={modelName}>
             <h3>{modelName}</h3>
             <h4>{brandName}</h4>
             <h5>{category}</h5>
+            </Link>
         </li>  
     )
 }
