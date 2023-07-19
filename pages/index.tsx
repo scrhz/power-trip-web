@@ -1,3 +1,3 @@
-export default function HomePage() {
+export default () => {
   return <h2>Home</h2>;
 }

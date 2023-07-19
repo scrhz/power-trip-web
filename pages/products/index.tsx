@@ -1,7 +1,7 @@
 import { client } from '../../utils/contentful-host'
 import ProductCard from '../../components/product-card'
 
-export default function Products({products}) {
+export default ({products}) => {
     return (
         <div>
             <h2>Hire</h2>

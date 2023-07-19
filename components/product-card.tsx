@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export default function ProductCard({ product }) {
+export default ({ product }) => {
     const { modelName, brandName, slug, category, description, pricePerDay, numberOfUnitsAvailable } = product.fields
 
     return (

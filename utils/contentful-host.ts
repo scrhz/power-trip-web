@@ -1,9 +1,10 @@
-const contentful = require('contentful')
+import { createClient } from 'contentful'
+import getConfig from '../utils/config'
 
-const space = process.env.CONTENTFUL_SPACE_ID
-const accessToken = process.env.CONTENTFUL_ACCESS_TOKEN
+const config = getConfig(process.env.CONTENTFUL_ENVIRONMENT)
 
-export const client = contentful.createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+export const client = createClient({
+    space: config.spaceId,
+    accessToken: config.accessToken,
+    environment: config.environment
 })
