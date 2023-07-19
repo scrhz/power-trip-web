@@ -9,11 +9,6 @@ body {
   margin: 0 auto;
 }
 
-a {
-  color: #f2f2f2;
-  text-decoration: none;
-}
-
 .content {
   max-width: 1080px;
   margin: 10px;
@@ -21,6 +16,15 @@ a {
 
 .content h2 {
   margin: 0px auto 40px;
+}
+
+a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 nav {
@@ -51,4 +55,8 @@ footer {
   margin-top: 60px;
   color: #d2d2d2;
   border-top: 1px solid #d2d2d2;
+}
+
+.page {
+  margin: 10px;
 }

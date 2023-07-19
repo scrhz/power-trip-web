@@ -3,7 +3,7 @@ import ProductCard from '../../components/product-card'
 
 export default ({products}) => {
     return (
-        <div>
+        <div className='page'>
             <h2>Hire</h2>
             <ul>
                 {products.map((product, i) => (
