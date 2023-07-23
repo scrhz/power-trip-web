@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 export default (props) => {
-    return <Image loader={contentfulLoader} {...props}/>
+    return <Image className="coverImage" loader={contentfulLoader} {...props} />
 }
 
 const contentfulLoader = ({ src, width, quality }) => {
