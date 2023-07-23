@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div>
+    <div className='page'>
       <h2>About</h2>
       <p>
         Conceived in 2012, Power Trip is a network of artists, engineers &
