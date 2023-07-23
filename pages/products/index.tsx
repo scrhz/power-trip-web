@@ -16,7 +16,6 @@ export default ({products}) => {
 
 export const getStaticProps = async () => {
     const response = await client.getEntries({ content_type: 'product' })
-
     return {
         props: {
             products: response.items,
