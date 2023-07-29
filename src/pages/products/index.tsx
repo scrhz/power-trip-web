@@ -6,7 +6,7 @@ export default ({ products }) => {
         <div className="page">
             <h2>Hire</h2>
             <div className="grid">
-                {products.map((product, i) => (
+                {products.map((product) => (
                     <ProductCard key={product.fields.slug} product={product} />
                 ))}
             </div>

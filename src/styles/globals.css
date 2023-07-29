@@ -86,3 +86,7 @@ footer {
 .grid-card div {
     padding: 5px;
 }
+
+.product-detail {
+    display: inline-block;
+}

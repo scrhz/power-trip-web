@@ -3,7 +3,7 @@ import ContentfulImage from './contentful-image'
 import speakerIcon from '../../resources/speaker-icon.png'
 
 export default ({ product }) => {
-    const { modelName, brandName, slug, category, coverImage } = product.fields
+    const { modelName, brandName, slug, category, image } = product.fields
 
     return (
         <div className="grid-card">
@@ -11,7 +11,7 @@ export default ({ product }) => {
                 <div>
                     <ContentfulImage
                         alt={`Cover image for: ${modelName}`}
-                        src={coverImage?.fields?.file?.url ?? speakerIcon.src}
+                        src={image?.fields?.file?.url ?? speakerIcon.src}
                         width={'200'}
                         height={'200'}
                     />
