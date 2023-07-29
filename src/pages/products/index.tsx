@@ -5,7 +5,7 @@ export default ({ products }) => {
     return (
         <div className="page">
             <h2>Hire</h2>
-            <div className="product-grid">
+            <div className="grid">
                 {products.map((product, i) => (
                     <ProductCard key={product.fields.slug} product={product} />
                 ))}

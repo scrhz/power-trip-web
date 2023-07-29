@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import ContentfulImage from './contentful-image'
-import speakerIcon from '../resources/speaker-icon.png'
+import speakerIcon from '../../resources/speaker-icon.png'
 
 export default ({ product }) => {
     const { modelName, brandName, slug, category, coverImage } = product.fields
 
     return (
-        <div className="product-card">
+        <div className="grid-card">
             <Link href={`/products/${slug}`} aria-label={modelName}>
                 <div>
                     <ContentfulImage
@@ -29,9 +29,9 @@ export default ({ product }) => {
 const ProductLabel = (props) => {
     return (
         <div>
-            <h3 className="product-label-header">{props.modelName}</h3>
-            <h4 className="product-label-header">{props.brandName}</h4>
-            <h5 className="product-label-header">{props.category}</h5>
+            <h3 className="grid-label-header">{props.modelName}</h3>
+            <h4 className="grid-label-header">{props.brandName}</h4>
+            <h5 className="grid-label-header">{props.category}</h5>
         </div>
     )
 }
