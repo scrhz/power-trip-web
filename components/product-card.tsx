@@ -19,7 +19,7 @@ export default ({ product }) => {
                 <ProductLabel
                     modelName={modelName}
                     brandName={brandName}
-                    category={category}
+                    category={category?.fields?.name}
                 />
             </Link>
         </div>
