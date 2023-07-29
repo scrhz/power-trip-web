@@ -1,7 +1,16 @@
-import Image from 'next/image'
+import Image from 'next/legacy/image'
 
 export default (props) => {
-    return <Image loader={contentfulLoader} {...props}/>
+    return (
+        <Image
+            className="coverImage"
+            layout="responsive"
+            objectFit="contain"
+            objectPosition="center"
+            loader={contentfulLoader}
+            {...props}
+        />
+    )
 }
 
 const contentfulLoader = ({ src, width, quality }) => {

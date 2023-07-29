@@ -1,15 +1,15 @@
 import { client } from '../../utils/contentful-host'
 import ProductCard from '../../components/product-card'
 
-export default ({products}) => {
+export default ({ products }) => {
     return (
-        <div className='page'>
+        <div className="page">
             <h2>Hire</h2>
-            <ul>
+            <div className="product-grid">
                 {products.map((product, i) => (
-                    <ProductCard key={product.fields.slug} product={product}/>
+                    <ProductCard key={product.fields.slug} product={product} />
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }
@@ -19,7 +19,7 @@ export const getStaticProps = async () => {
     return {
         props: {
             products: response.items,
-            revalidate: 60
-        }
+            revalidate: 60,
+        },
     }
 }
