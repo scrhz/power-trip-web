@@ -1,4 +1,4 @@
-import ContentfulImage from '../../components/contentful-image'
+import { ProductDetailImage } from '../../components/contentful-image'
 import { client } from '../../utils/contentful-host'
 import speakerIcon from '../../../resources/speaker-icon.png'
 
@@ -8,13 +8,13 @@ export default ({ product }) => {
     return (
         <div className="page">
             <div className="product-detail">
+                <div>
+                    <ProductDetailImage
+                        alt={`Cover image for: ${modelName}`}
+                        src={image?.fields?.file?.url ?? speakerIcon.src}
+                    />
+                </div>
                 <ProductDetailLabel product={product} />
-                <ContentfulImage
-                    alt={`Cover image for: ${modelName}`}
-                    src={image?.fields?.file?.url ?? speakerIcon.src}
-                    width={'200'}
-                    height={'200'}
-                />
             </div>
         </div>
     )
@@ -30,8 +30,9 @@ const ProductDetailLabel = (props) => {
     } = props.product.fields
 
     const availabilityLabel =
-        parseInt(numberOfUnitsAvailable) > 1 ??
-        `${numberOfUnitsAvailable} available`
+        parseInt(numberOfUnitsAvailable) >= 2
+            ? `${numberOfUnitsAvailable} available`
+            : null
 
     return (
         <div>
@@ -40,11 +41,7 @@ const ProductDetailLabel = (props) => {
             </h2>
             <h3>{category.fields.name}</h3>
             <h4>From £{pricePerDay} per day</h4>
-            <h4>
-                {parseInt(numberOfUnitsAvailable) >= 2
-                    ? `${numberOfUnitsAvailable} available`
-                    : null}
-            </h4>
+            <h4>{availabilityLabel}</h4>
         </div>
     )
 }

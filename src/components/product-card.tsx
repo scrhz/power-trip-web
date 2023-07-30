@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import ContentfulImage from './contentful-image'
+import { CardImage } from './contentful-image'
 import speakerIcon from '../../resources/speaker-icon.png'
 
 export default ({ product }) => {
@@ -9,11 +9,9 @@ export default ({ product }) => {
         <div className="grid-card">
             <Link href={`/products/${slug}`} aria-label={modelName}>
                 <div>
-                    <ContentfulImage
+                    <CardImage
                         alt={`Cover image for: ${modelName}`}
                         src={image?.fields?.file?.url ?? speakerIcon.src}
-                        width={'200'}
-                        height={'200'}
                     />
                 </div>
                 <ProductLabel

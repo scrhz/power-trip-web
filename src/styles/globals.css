@@ -88,5 +88,13 @@ footer {
 }
 
 .product-detail {
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product-detail div {
+    padding: 10px;
+    text-align: right;
+    flex: 1;
 }

@@ -1,10 +1,23 @@
 import Image from 'next/legacy/image'
 
-export default (props) => {
+export const CardImage = (props) => {
+    return (
+        <ContentfulImage
+            layout="responsive"
+            width={'200'}
+            height={'200'}
+            {...props}
+        />
+    )
+}
+
+export const ProductDetailImage = (props) => {
+    return <ContentfulImage width={'300'} height={'300'} {...props} />
+}
+
+const ContentfulImage = (props) => {
     return (
         <Image
-            className="coverImage"
-            layout="responsive"
             objectFit="contain"
             objectPosition="center"
             loader={contentfulLoader}
