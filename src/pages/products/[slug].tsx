@@ -1,9 +1,12 @@
 import { ProductDetailImage } from '../../components/contentful-image'
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { client } from '../../utils/contentful-host'
 import speakerIcon from '../../../resources/speaker-icon.png'
 
 export default ({ product }) => {
     const { modelName, image, description } = product.fields
+
+    console.dir(description?.content, { depth: 5 })
 
     return (
         <div className="page">
@@ -16,6 +19,7 @@ export default ({ product }) => {
                 </div>
                 <ProductDetailLabel product={product} />
             </div>
+            <div>{documentToReactComponents(description)}</div>
         </div>
     )
 }
