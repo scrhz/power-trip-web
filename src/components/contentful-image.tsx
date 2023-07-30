@@ -1,4 +1,5 @@
 import Image from 'next/legacy/image'
+import speakerIcon from '../../resources/speaker-icon.png'
 
 export const CardImage = (props) => {
     return (
@@ -21,6 +22,8 @@ const ContentfulImage = (props) => {
             objectFit="contain"
             objectPosition="center"
             loader={contentfulLoader}
+            placeholder="blur"
+            blurDataURL={speakerIcon}
             {...props}
         />
     )

@@ -6,8 +6,6 @@ import speakerIcon from '../../../resources/speaker-icon.png'
 export default ({ product }) => {
     const { modelName, image, description } = product.fields
 
-    console.dir(description?.content, { depth: 5 })
-
     return (
         <div className="page">
             <div className="product-detail">
@@ -51,10 +49,10 @@ const ProductDetailLabel = (props) => {
 }
 
 export const getStaticProps = async ({ params }) => {
-    const { slug } = params
+    const { productSlug } = params
     const response = await client.getEntries({
         'content_type': 'product',
-        'fields.slug': slug,
+        'fields.slug': productSlug,
     })
 
     return {
@@ -68,7 +66,7 @@ export const getStaticProps = async ({ params }) => {
 export const getStaticPaths = async () => {
     const response = await client.getEntries({ content_type: 'product' })
     const paths = response.items.map((item) => ({
-        params: { slug: item.fields.slug },
+        params: { productSlug: item.fields.slug },
     }))
 
     return {
