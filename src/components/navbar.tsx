@@ -7,9 +7,8 @@ export default () => {
                 <h1>Power Trip Productions</h1>
             </div>
             <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/audio">Audio</Link>
-            <Link href="/products">Hire</Link>
+            <Link href="/audio">Audio Services</Link>
+            <Link href="/products">Equipment Hire</Link>
         </nav>
     )
 }

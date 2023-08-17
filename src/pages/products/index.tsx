@@ -4,7 +4,7 @@ import CategoryCard from '../../components/product-category-card'
 export default ({ productCategories }) => {
     return (
         <div className="page">
-            <h2>Hire</h2>
+            <h2>Equipment Hire</h2>
             <div className="grid">
                 {productCategories.map((productCategory) => (
                     <CategoryCard

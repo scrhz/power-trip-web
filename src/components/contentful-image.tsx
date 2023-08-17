@@ -7,19 +7,37 @@ export const CardImage = (props) => {
             layout="responsive"
             width={'200'}
             height={'200'}
+            objectFit={'contain'}
             {...props}
         />
     )
 }
 
 export const ProductDetailImage = (props) => {
-    return <ContentfulImage width={'300'} height={'300'} {...props} />
+    return (
+        <ContentfulImage
+            width={'300'}
+            height={'300'}
+            objectFit={'contain'}
+            {...props}
+        />
+    )
+}
+
+export const AudioServiceImage = (props) => {
+    return (
+        <ContentfulImage
+            width={'300'}
+            height={'300'}
+            objectFit={'cover'}
+            {...props}
+        />
+    )
 }
 
 const ContentfulImage = (props) => {
     return (
         <Image
-            objectFit="contain"
             objectPosition="center"
             loader={contentfulLoader}
             placeholder="blur"

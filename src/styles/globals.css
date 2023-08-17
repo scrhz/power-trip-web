@@ -98,3 +98,20 @@ footer {
     text-align: right;
     flex: 1;
 }
+
+.audio-service-card {
+    padding: 5px;
+    gap: 20px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 15px black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.audio-service-card div {
+    padding: 5px;
+    text-align: left;
+    flex: 1;
+}
