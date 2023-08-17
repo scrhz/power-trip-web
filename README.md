@@ -14,6 +14,11 @@ It has been a conscious decision throughout to build from the ground up & avoid 
 2. Run `npm install` from the repo root to install dependencies.
 3. Run `npm run dev` to build & run the site locally with hot-reloading.
 
+## Running tests:
+
+1. Make sure the above steps have been run to install dependencies.
+2. Run `npx playwright test` to run the e2e tests.
+
 ## Preparing the CMS
 
 This project relies on a specific private Contentful space to serve products for the Audio Hire page.
