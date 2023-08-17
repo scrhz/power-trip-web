@@ -1,5 +1,9 @@
 # power-trip-web
 
+https://power-trip-web.vercel.app/
+https://power-trip-web-scrhz.vercel.app/
+https://power-trip-web-git-main-scrhz.vercel.app/
+
 This website project was intended as a learning exercise in the fundamentals of front-end web development through NextJS/React, whilst also providing a practical home to list freelance audio services.
 
 It has been a conscious decision throughout to build from the ground up & avoid additional libraries where practical, hence the omission of CSS preprocessors or UI templates.
