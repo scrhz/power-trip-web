@@ -61,28 +61,57 @@ footer {
     margin: 10px;
 }
 
-.product-grid {
+.grid {
     padding: 10px;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-.product-card {
+.grid-card {
     padding: 5px;
     border-radius: 3px;
     box-shadow: 5px 5px 15px black;
 }
 
-.product-card:hover {
+.grid-card:hover {
     box-shadow: 1px 1px 10px #d2d2d2;
 }
 
-.product-label-header {
+.grid-label-header {
     padding: 3px;
     margin: 0px;
 }
 
-.product-card div {
+.grid-card div {
     padding: 5px;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.product-detail div {
+    padding: 10px;
+    text-align: right;
+    flex: 1;
+}
+
+.audio-service-card {
+    padding: 5px;
+    gap: 20px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 15px black;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.audio-service-card div {
+    padding: 5px;
+    text-align: left;
+    flex: 1;
 }
