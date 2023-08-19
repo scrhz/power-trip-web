@@ -1,14 +1,8 @@
 import { AudioServiceImage } from '../components/contentful-image'
-import { Metadata } from 'next'
 import speakerIcon from '../../resources/speaker-icon.png'
 import synthesiserIcon from '../../resources/sequential-pro-3.webp'
 import monitorIcon from '../../resources/adam-a7x.webp'
 import producerIcon from '../../resources/producer-stock.jpg'
-
-export const metadata: Metadata = {
-    title: 'Power Trip Productions',
-    description: 'AV Services from the underground',
-}
 
 export default () => {
     return (
