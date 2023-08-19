@@ -1,5 +1,9 @@
 # power-trip-web
 
+https://power-trip-web.vercel.app/
+https://power-trip-web-scrhz.vercel.app/
+https://power-trip-web-git-main-scrhz.vercel.app/
+
 This website project was intended as a learning exercise in the fundamentals of front-end web development through NextJS/React, whilst also providing a practical home to list freelance audio services.
 
 It has been a conscious decision throughout to build from the ground up & avoid additional libraries where practical, hence the omission of CSS preprocessors or UI templates.
@@ -9,6 +13,11 @@ It has been a conscious decision throughout to build from the ground up & avoid 
 1. Make sure you have `node` v18 or higher installed and in your $PATH.
 2. Run `npm install` from the repo root to install dependencies.
 3. Run `npm run dev` to build & run the site locally with hot-reloading.
+
+## Running tests:
+
+1. Make sure the above steps have been run to install dependencies.
+2. Run `npx playwright test` to run the e2e tests.
 
 ## Preparing the CMS
 
