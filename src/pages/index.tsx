@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'Power Trip Productions',
+    description: 'AV Services from the underground',
+}
+
 export default () => {
     return (
         <div className="page">
