@@ -1,9 +1,31 @@
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
+:root {
+    --colour-bg-grad-high: #151828;
+    --colour-bg-grad-mid: #1c1c1c;
+    --colour-bg-low: #1a1a1f;
+
+    --colour-bg-gradient: radial-gradient(
+        circle at 50% 50%,
+        var(--colour-bg-grad-high) 0%,
+        var(--colour-bg-grad-mid) 100%
+    );
+    --colour-bg-card: radial-gradient(
+        circle at 50% 50%,
+        var(--colour-bg-grad-mid) 0%,
+        var(--colour-bg-low) 100%
+    );
+
+    --colour-text-primary: #f2f2f2;
+    --colour-text-secondary: #d2d2d2;
+
+    --colour-card-shadow: black;
+}
+
 body {
     font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #1c1c1c;
-    color: #f2f2f2;
+    background: var(--colour-bg-gradient);
+    color: var(--colour-text-primary);
     padding: 20px;
     max-width: 720px;
     margin: 0 auto;
@@ -19,7 +41,7 @@ body {
 }
 
 a {
-    color: #f2f2f2;
+    color: var(--colour-text-primary);
     text-decoration: none;
 }
 
@@ -33,7 +55,7 @@ nav {
     display: flex-start;
     justify-content: flex-start;
     align-items: flex-end;
-    border-bottom: 1px solid #f2f2f2;
+    border-bottom: 1px solid var(--colour-text-primary);
 }
 
 nav a {
@@ -53,8 +75,8 @@ footer {
     text-align: center;
     padding: 30px 0;
     margin-top: 60px;
-    color: #d2d2d2;
-    border-top: 1px solid #d2d2d2;
+    color: var(--colour-text-secondary);
+    border-top: 1px solid var(--colour-text-secondary);
 }
 
 .page {
@@ -69,13 +91,14 @@ footer {
 }
 
 .grid-card {
+    background: var(--colour-bg-card);
     padding: 5px;
     border-radius: 3px;
-    box-shadow: 5px 5px 15px black;
+    box-shadow: 5px 5px 15px var(--colour-card-shadow);
 }
 
 .grid-card:hover {
-    box-shadow: 1px 1px 10px #d2d2d2;
+    box-shadow: 1px 1px 10px var(--colour-text-secondary);
 }
 
 .grid-label-header {
@@ -103,7 +126,7 @@ footer {
     padding: 5px;
     gap: 20px;
     border-radius: 3px;
-    box-shadow: 5px 5px 15px black;
+    box-shadow: 5px 5px 15px var(--colour-card-shadow);
 
     display: flex;
     flex-direction: row;
