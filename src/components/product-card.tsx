@@ -3,7 +3,8 @@ import { CardImage } from './contentful-image'
 import speakerIcon from '../../resources/speaker-icon.png'
 
 export default ({ product }) => {
-    const { modelName, brandName, slug, category, image } = product.fields
+    const { modelName, brandName, slug, category, image, shortDescription } =
+        product.fields
 
     return (
         <div className="grid-card">
@@ -18,6 +19,7 @@ export default ({ product }) => {
                     modelName={modelName}
                     brandName={brandName}
                     category={category?.fields?.name}
+                    shortDescription={shortDescription}
                 />
             </Link>
         </div>
@@ -27,9 +29,12 @@ export default ({ product }) => {
 const ProductLabel = (props) => {
     return (
         <div>
-            <h3 className="grid-label-header">{props.modelName}</h3>
-            <h4 className="grid-label-header">{props.brandName}</h4>
-            <h5 className="grid-label-header">{props.category}</h5>
+            <h3 className="grid-label-header">
+                {props.brandName} - {props.modelName}
+            </h3>
+            <h4 className="grid-label-header">
+                {props.shortDescription ?? props.category}
+            </h4>
         </div>
     )
 }

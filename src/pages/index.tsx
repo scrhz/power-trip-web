@@ -9,11 +9,7 @@ export default () => {
             <p>
                 With a history of organising live events in the South West and
                 London, we represent a diverse skillset with an emphasis on
-                bespoke audio visual experiences, from the studio to the stage.
-            </p>
-            <p>
-                We offer a range of E2E creative services which you can find out
-                more about in the respective sections on this website.
+                bespoke & immersive Audio-Visual experiences.
             </p>
             <p>
                 For live events, we offer audio engineering, sound system setup
