@@ -30,6 +30,7 @@ For obvious security reasons the required environment variables to access this s
 To view this section of the site on a local build, the project is expecting the following local environment variables (e.g. in a `.env` file at the root of the project):
 
 -   `CONTENTFUL_SPACE_ID`
--   `CONTENTFUL_ACCESS_TOKEN`
+-   `CONTENTFUL_ENVIRONMENT` (develop or master)
+-   `CONTENTFUL_ACCESS_TOKEN` (used for production environment)
+-   `CONTENTFUL_DEVELOP_TOKEN` (used when environment is set to "develop")
 -   `CONTENTFUL_PREVIEW` (boolean flag, set to false as standard)
--   `CONTENTFUL_ENVIRONMENT` (develop or main)
