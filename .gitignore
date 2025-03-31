@@ -5,3 +5,8 @@ next-env.d.ts
 /test-results/
 /playwright-report/
 /playwright/.cache/
+
+# Contentful merge output files
+contentful-merge-*.log
+contentful-changeset-*.json
+changeset-*.json
