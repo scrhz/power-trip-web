@@ -1,40 +1,37 @@
 import Link from 'next/link'
 import { CardImage } from './contentful-image'
 import speakerIcon from '../../resources/speaker-icon.png'
+import {
+    Card,
+    CardHeader,
+    CardDescription,
+    CardContent,
+    CardFooter,
+    CardTitle,
+} from '@/components/ui/card'
+import { Car } from 'lucide-react'
 
 export default ({ product }) => {
-    const { modelName, brandName, slug, category, image, shortDescription } =
+    const { modelName, brandName, slug, image, shortDescription, category, pricePerDay } =
         product.fields
 
     return (
-        <div className="grid-card">
+        <Card>
             <Link href={`/products/${slug}`} aria-label={modelName}>
-                <div>
+                <CardHeader>
+                    <CardTitle>
+                        {modelName} - {brandName}
+                    </CardTitle>
+                    <CardDescription>{shortDescription ?? category}</CardDescription>
+                </CardHeader>
+                <CardContent>
                     <CardImage
                         alt={`Cover image for: ${modelName}`}
                         src={image?.fields?.file?.url ?? speakerIcon.src}
                     />
-                </div>
-                <ProductLabel
-                    modelName={modelName}
-                    brandName={brandName}
-                    category={category?.fields?.name}
-                    shortDescription={shortDescription}
-                />
+                </CardContent>
+                <CardFooter>£{pricePerDay} per evening</CardFooter>
             </Link>
-        </div>
-    )
-}
-
-const ProductLabel = (props) => {
-    return (
-        <div>
-            <h3 className="grid-label-header">
-                {props.brandName} - {props.modelName}
-            </h3>
-            <h4 className="grid-label-header">
-                {props.shortDescription ?? props.category}
-            </h4>
-        </div>
+        </Card>
     )
 }
