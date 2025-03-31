@@ -30,7 +30,6 @@ For obvious security reasons the required environment variables to access this s
 To view this section of the site on a local build, the project is expecting the following local environment variables (e.g. in a `.env` file at the root of the project):
 
 -   `CONTENTFUL_SPACE_ID`
--   `CONTENTFUL_ENVIRONMENT` (develop or master)
--   `CONTENTFUL_ACCESS_TOKEN` (used for production environment)
--   `CONTENTFUL_DEVELOP_TOKEN` (used when environment is set to "develop")
+-   `CONTENTFUL_ACCESS_TOKEN` (n.b. `contentful-merge` tooling requires a token with access to both environments involved in the merge)
 -   `CONTENTFUL_PREVIEW` (boolean flag, set to false as standard)
+-   `CONTENTFUL_ENVIRONMENT` (develop or master)
