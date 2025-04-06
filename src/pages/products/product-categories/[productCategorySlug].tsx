@@ -1,9 +1,11 @@
 import { client } from '../../../utils/contentful-host'
 import ProductCard from '../../../components/product-card'
+import BackButton from '../../../components/back-button'
 
 export default ({ products }) => {
     return (
         <div className="page">
+            <BackButton/>
             <h2>{products?.[0].fields.category.fields.name}</h2>
             <div className="grid">
                 {products.map((product) => (

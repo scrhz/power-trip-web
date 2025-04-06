@@ -2,12 +2,14 @@ import { ProductDetailImage } from '../../components/contentful-image'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { client } from '../../utils/contentful-host'
 import speakerIcon from '../../../resources/speaker-icon.png'
+import BackButton from '../../components/back-button'
 
 export default ({ product }) => {
     const { modelName, image, description } = product.fields
 
     return (
         <div className="page">
+            <BackButton/>
             <div className="product-detail">
                 <div>
                     <ProductDetailImage
