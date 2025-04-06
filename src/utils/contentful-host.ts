@@ -6,5 +6,6 @@ const config = getConfig(process.env.CONTENTFUL_ENVIRONMENT)
 export const client = createClient({
     space: config.spaceId,
     accessToken: config.accessToken,
-    environment: config.environment
+    environment: config.environment,
+    host: config.host
 })
