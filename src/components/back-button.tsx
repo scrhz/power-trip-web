@@ -1,11 +1,11 @@
-import { useRouter } from 'next/router'  // Usage: Page router
+import { useRouter } from 'next/router'; // Usage: Page router
 
 export default function BackButton() {
-  const router = useRouter()
+    const router = useRouter();
 
-  return (
-    <button type="button" onClick={() => router.back()}>
-      Back
-    </button>
-  )
+    return (
+        <button className="hover:underline" type="button" onClick={() => router.back()}>
+            Back
+        </button>
+    );
 }

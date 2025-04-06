@@ -1,26 +1,20 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import 'tailwindcss';
+@import 'tailwindcss/preflight';
+@import 'tailwindcss/utilities';
+
+@layer base {
+    html {
+        @apply bg-zinc-900 text-zinc-100;
+    }
+    h2 {
+        @apply mb-10 mx-auto;
+    }
+}
 
 body {
-    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #1c1c1c;
-    color: #f2f2f2;
     padding: 20px;
     max-width: 720px;
     margin: 0 auto;
-}
-
-.content {
-    max-width: 1080px;
-    margin: 10px;
-}
-
-.content h2 {
-    margin: 0px auto 40px;
-}
-
-a {
-    color: #f2f2f2;
-    text-decoration: none;
 }
 
 a:hover {
@@ -57,10 +51,6 @@ footer {
     border-top: 1px solid #d2d2d2;
 }
 
-.page {
-    margin: 10px;
-}
-
 .grid {
     padding: 10px;
     display: grid;
@@ -85,18 +75,6 @@ footer {
 
 .grid-card div {
     padding: 5px;
-}
-
-.product-detail {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.product-detail div {
-    padding: 10px;
-    text-align: right;
-    flex: 1;
 }
 
 .audio-service-card {
