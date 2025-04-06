@@ -25,11 +25,12 @@ https://power-trip-web-git-main-scrhz.vercel.app/
 
 This project relies on a specific private Contentful space to serve products for the Audio Hire page.
 
-For obvious security reasons the required environment variables to access this space have not been included in the repository.
+For obvious security reasons, the required environment variables to access this space have not been included in the repository.
 
 To view this section of the site on a local build, the project is expecting the following local environment variables (e.g. in a `.env` file at the root of the project):
 
 -   `CONTENTFUL_SPACE_ID`
 -   `CONTENTFUL_ACCESS_TOKEN` (n.b. `contentful-merge` tooling requires a token with access to both environments involved in the merge)
 -   `CONTENTFUL_PREVIEW` (boolean flag, set to false as standard)
+-   `CONTENTFUL_PREVIEW_ACCESS_TOKEN` (required to access draft content, if `CONTENTFUL_PREVIEW` is set to `true`)
 -   `CONTENTFUL_ENVIRONMENT` (develop or master)
